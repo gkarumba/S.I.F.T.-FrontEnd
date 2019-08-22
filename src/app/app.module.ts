@@ -13,13 +13,13 @@ import { Routes, RouterModule } from '@angular/router';
   declarations: [
     AppComponent,
     RegisterComponent,
-    LoginComponent,
-    MaterialModule
+    LoginComponent
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     BrowserAnimationsModule,
     RouterModule.forRoot ([
       { path: '', redirectTo: '/', pathMatch: 'full' },
