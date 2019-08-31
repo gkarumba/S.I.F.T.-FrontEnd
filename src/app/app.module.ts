@@ -1,9 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { FormsModule } from '@angular/forms'
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AgmCoreModule } from '@agm/core'
+import { AgmCoreModule, GoogleMapsAPIWrapper } from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -12,12 +15,15 @@ import { AgmCoreModule } from '@agm/core'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAJXMzzE17saSH55EZCT2m1YLsfaEWfNsY',
       libraries: ['places']
     })
   ],
-  providers: [],
+  providers: [
+    GoogleMapsAPIWrapper
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
