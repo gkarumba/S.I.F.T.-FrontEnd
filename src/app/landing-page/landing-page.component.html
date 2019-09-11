@@ -17,7 +17,7 @@
           <div class="contact-form">
             <input type="text" name="product" placeholder="Search For products" [(ngModel)]='searchterm'
               (keyup.enter)="searchProduct()">
-            <div class="kimonyoski"><input type="file" accept="image/*" id="camera"><label for="camera"></label></div>
+              <form [formGroup]="form" ><div class="kimonyoski"><input type="file" name="image" (change)="onChange($event)" accept="image/*" id="camera"><label for="camera"></label></div></form>
           </div>
         </div>
       </div>

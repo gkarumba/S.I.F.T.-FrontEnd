@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class ProductService {
 
-  private searchUrl = 'https://siftsearch.herokuapp.com/products/?search=';
-  private retailerUrl = 'https://siftsearch.herokuapp.com/retailers/';
+  private searchUrl = 'http://35.177.84.175/products/?search=';
+  private retailerUrl = 'http://35.177.84.175/retailers/';
 
   constructor(private http: HttpClient) { }
 

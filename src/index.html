@@ -24,48 +24,7 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-  
-=======
-  <header id="header">
-    <div class="header-area">
-      <div class="container">
-        <div class="row">
-          <div class="menu-area">
-            <div class="col-md-3 col-sm-12 col-xs-12">
-              <div class="logo">
-                <a href="/"><img src="assets/img/icon/sift-logo1.png" height='50px'></a>
-              </div>
-            </div>
-            <div class="col-md-9 hidden-xs hidden-sm">
-              <div class="main-menu">
-                <nav class="nav-menu">
-                  <ul>
-                    <li *ngIf = '!user' ><a href="/sign-in">Login</a></li>
-                    <li><a href="/createAccount">Register</a></li>
-                    <!-- <li><a href="#">Upload</a></li> -->
-                    <!-- <li> <a href="/sign-in">
-                        <div *ngIf="auth.user$ | async as user; else login">
-                          <img src="{{user.photoURL}}">
-                          <button (click)="auth.signOut()">Sign Out</button>
-                        </div>
-                      </a> </li> -->
-                    <li *ngIf="auth.user$ | async as user; else login"><a href="/sign-in" (click)="auth.signOut()">Sign Out</a></li>
-                  </ul>
-                </nav>
-              </div>
-            </div>
-            <div class="col-sm-12 col-xs-12 visible-sm visible-xs">
-              <div class="mobile_menu"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
-  </header>
-
->>>>>>> 9dff0002a04a00598a14fd09de57135eaab4d310
   <app-root></app-root>
 
 

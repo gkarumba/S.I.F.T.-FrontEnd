@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { from } from 'rxjs';
 import { NavbarComponent } from './navbar/navbar.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 import { AngularFireModule } from '@angular/fire';
@@ -53,10 +54,10 @@ const firebaseConfig = {
     LoginComponent,
     RegistrationComponent,
     RetailersComponent,
-<<<<<<< HEAD
+
     NavbarComponent,
     
-=======
+
 
     HomeComponent,
     SignInComponent,
@@ -67,8 +68,6 @@ const firebaseConfig = {
     FiltersComponent,
 
     GmapComponent
-
->>>>>>> 9dff0002a04a00598a14fd09de57135eaab4d310
   ],
   imports: [
     BrowserModule,
@@ -80,8 +79,8 @@ const firebaseConfig = {
     }),
 
     FormsModule,
-<<<<<<< HEAD
-=======
+    ReactiveFormsModule,
+
     AppRoutingModule,
     AngularFirestoreModule,
     AngularFireAuthModule,
@@ -89,7 +88,7 @@ const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     HttpClientModule, 
     NgxSkeletonLoaderModule
->>>>>>> 9dff0002a04a00598a14fd09de57135eaab4d310
+
   ],
   providers: [],
   bootstrap: [AppComponent]
