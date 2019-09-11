@@ -58,6 +58,7 @@
     /*-----------------------
     Home One
     -----------------------*/
+    
     .menu-area{
         display: block;
     }
@@ -184,6 +185,7 @@
     Home One
     -----------------------*/
     /*preloader hide*/
+    
     #preloader {
         display: none!important;
     }
