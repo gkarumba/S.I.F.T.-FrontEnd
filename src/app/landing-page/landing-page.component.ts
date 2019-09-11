@@ -31,10 +31,12 @@ export class LandingPageComponent implements OnInit {
     this.prod.searchProduct(this.searchterm).subscribe(res => {
       for (var i =0;i < res.length; i++){
         var re = res[i].image;
-        var url = new URL(re);
-        url.hostname = 'http://35.177.84.175/'
-        res[i].image = url.href
-        console.log(url.href)
+        var matchProtocolDomainHost = /^.*\/\/[^\/]+:?[0-9]?\//i;
+
+        // Replace protocol, domain and host from url, assign to `myNewUrl`
+        var myNewUrl = re.replace(matchProtocolDomainHost, '');
+        var me = 'http://35.177.84.175/' + myNewUrl;
+        res[i].image = me;
       }
       this.products = JSON.stringify(res);
       console.log(this.products);
