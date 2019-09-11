@@ -14,10 +14,12 @@ export class RetailersComponent implements OnInit {
   public searchterm: string;
   public prod: string;
   products;
+  wantedRating;
   public retail: string;
   retailers;
   Arr = Array;
   dealers = [];
+  filteredDealers = [];
   private minPrice: number;
   private maxPrice: number;
   public modalIsVisible = false;
@@ -77,7 +79,7 @@ export class RetailersComponent implements OnInit {
       }
     }
     this.num = this.dealers.length;
-
+    this.filteredDealers = [...this.dealers];
     console.log(this.dealers);
   }
 
@@ -104,4 +106,27 @@ export class RetailersComponent implements OnInit {
     });
   }
 
+  filterByPrice(lowPrice:number, highPrice:number){
+    this.dealers = this.filteredDealers.filter(dealer => dealer.products.price >= lowPrice && dealer.products.price <= highPrice);
+  }
+  
+  clickedOne(){
+    this.wantedRating = 1;
+  }
+  clickedTwo(){
+    this.wantedRating = 2;
+  }
+  clickedThree(){
+    this.wantedRating = 3;
+  }
+  clickedFour(){
+    this.wantedRating = 4;
+  }
+  clickedFive(){
+    this.wantedRating = 5;
+  }
+
+  filterByRating(){
+    this.dealers = this.filteredDealers.filter(dealer => dealer.rating >= this.wantedRating);
+  }
 }

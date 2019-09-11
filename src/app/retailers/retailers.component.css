@@ -51,9 +51,14 @@
     border-radius: 5px;
     border: 1px solid lightgray;
   }
+  .filterText{
+    position: relative;
+    margin-top: 38px;
+    float: right;
+  }
   
   .modContentRating {
-    position: absolute;
+    position: inherit;
     display: flex;
     transform:rotateY(180deg);
   }
@@ -136,6 +141,10 @@
     }
   .close{
       margin-top: 2%;
+  }
+
+  .filterText{
+    margin-top: 60px;
   }
 
   .priceInputs input{

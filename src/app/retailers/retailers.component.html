@@ -38,9 +38,10 @@
     <div class="customSlider">
       <ng5-slider [(value)]="minValue" [(highValue)]="maxValue" [options]="options"></ng5-slider>
       <div class="priceInputs">
-      <strong>Min. Price     </strong><input type="number" value="{{minPrice}}"><br>
-      <strong>Max. Price </strong><input type="number" value="{{maxPrice}}">
+      <strong>Min. Price     </strong><input type="number" value="{{minPrice}}" #minimum><br>
+      <strong>Max. Price </strong><input type="number" value="{{maxPrice}}" #maximum>
       </div>
+      <p (click)="filterByPrice(minimum.value, maximum.value)">Filter</p>
     </div>
     <div class="modBody">
     </div>
@@ -52,12 +53,13 @@
     <span class="close" (click)="toggleRating()">&times;</span>
   </div>
   <div class="modContentRating">
-    <input type="radio" name="star" id="star1" value="1"><label for="star1"></label>
-    <input type="radio" name="star" id="star2" value="2" ><label for="star2"></label>
-    <input type="radio" name="star" id="star3" value="3"><label for="star3"></label>
-    <input type="radio" name="star" id="star4" value="4"><label for="star4"></label>
-    <input type="radio" name="star" id="star5" value="5"><label for="star5"></label><br>
+    <input type="radio" name="star" id="star5" value="5"><label for="star5" (click)="clickedFive()"></label>
+    <input type="radio" name="star" id="star4" value="4" ><label for="star4" (click)="clickedFour()"></label>
+    <input type="radio" name="star" id="star3" value="3"><label for="star3" (click)="clickedThree()"></label>
+    <input type="radio" name="star" id="star2" value="2"><label for="star2" (click)="clickedTwo()"></label>
+    <input type="radio" name="star" id="star1" value="1"><label for="star1" (click)="clickedOne()"></label>
   </div>
+  <p class="filterText" (click)="filterByRating()">Filter</p>
 </div>
 
 
@@ -134,7 +136,7 @@
             <div class="col-md-4 col-sm-6 col-xs-12" *ngFor="let prod of dealers">
                 <div class="list-item" >
                   <div class="blog-thumbnail">
-                    <a href="blog-details.html"><img src="{{prod.products.image}}" alt="blog thumbnail"></a>
+                    <a href="blog-details.html"><img src="{{prod.products.image}}" alt="blog thumbnail" onerror="this.onerror=null; this.src='https://www.metrorollerdoors.com.au/wp-content/uploads/2018/02/unavailable-image.jpg'"></a>
                   </div>
                   <p>{{prod.name}}</p>
                   <h2 class="blog-title">{{prod.products.name}}</h2>
@@ -145,11 +147,11 @@
                     </div>
                     <ul>
                       <li class="retailerRating">
-                        <input type="radio" [checked]="prod.rating == 5"><label for="stars1"></label>
-                        <input type="radio" [checked]="prod.rating == 4"><label for="stars2"></label>
-                        <input type="radio" [checked]="prod.rating == 3"><label for="stars3"></label>
-                        <input type="radio" [checked]="prod.rating == 2"><label for="stars4"></label>
-                        <input type="radio" [checked]="prod.rating == 1"><label for="stars5"></label>
+                        <input type="radio" name="star" [checked]="prod.rating == 5" id="stars1"><label for="stars1"></label>
+                        <input type="radio" name="star" [checked]="prod.rating == 4" id="stars2"><label for="stars2"></label>
+                        <input type="radio" name="star" [checked]="prod.rating == 3" id="stars3"><label for="stars3"></label>
+                        <input type="radio" name="star" [checked]="prod.rating == 2" id="stars4"><label for="stars4"></label>
+                        <input type="radio" name="star" [checked]="prod.rating == 1" id="stars5"><label for="stars5"></label>
                       </li>|
                       <button type="button" class="btn btn-outline-primary" data-toggle="modal"
                         data-target="#basicExampleModal" style="font-size: 10px">

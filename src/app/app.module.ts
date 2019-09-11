@@ -55,8 +55,10 @@ const firebaseConfig = {
     RegistrationComponent,
     RetailersComponent,
 
+
     NavbarComponent,
     
+
 
 
     HomeComponent,
@@ -68,6 +70,7 @@ const firebaseConfig = {
     FiltersComponent,
 
     GmapComponent
+
   ],
   imports: [
     BrowserModule,
@@ -79,6 +82,7 @@ const firebaseConfig = {
     }),
 
     FormsModule,
+
     ReactiveFormsModule,
 
     AppRoutingModule,
