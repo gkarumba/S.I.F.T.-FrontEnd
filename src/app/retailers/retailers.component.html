@@ -147,11 +147,11 @@
                     </div>
                     <ul>
                       <li class="retailerRating">
-                        <input type="radio" name="star" [checked]="prod.rating == 5" id="stars1"><label for="stars1"></label>
-                        <input type="radio" name="star" [checked]="prod.rating == 4" id="stars2"><label for="stars2"></label>
-                        <input type="radio" name="star" [checked]="prod.rating == 3" id="stars3"><label for="stars3"></label>
-                        <input type="radio" name="star" [checked]="prod.rating == 2" id="stars4"><label for="stars4"></label>
-                        <input type="radio" name="star" [checked]="prod.rating == 1" id="stars5"><label for="stars5"></label>
+                        <input type="radio" [checked]="prod.rating == 5"><label for="stars1"></label>
+                        <input type="radio" [checked]="prod.rating == 4"><label for="stars2"></label>
+                        <input type="radio" [checked]="prod.rating == 3"><label for="stars3"></label>
+                        <input type="radio" [checked]="prod.rating == 2"><label for="stars4"></label>
+                        <input type="radio" [checked]="prod.rating == 1"><label for="stars5"></label>
                       </li>|
                       <button type="button" class="btn btn-outline-primary" data-toggle="modal"
                         data-target="#basicExampleModal" style="font-size: 10px">
