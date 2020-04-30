@@ -23,7 +23,7 @@
     "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
     "firebase": "^6.4.2",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "ng-click-outside": "^5.1.1",
     "ng5-slider": "^1.2.4",
     "ngx-skeleton-loader": "^1.2.2",
